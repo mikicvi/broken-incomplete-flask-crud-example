@@ -4,7 +4,7 @@ COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 COPY . /app
-ENV MYSQL_USER root
+ENV MYSQL_USER mikicv
 ENV MYSQL_PASSWORD secret
 ENV MYSQL_DB student
 ENV MYSQL_HOST 20.56.24.122
