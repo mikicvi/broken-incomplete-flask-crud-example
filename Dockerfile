@@ -2,7 +2,7 @@ FROM python:3.8-alpine
 RUN apk add --no-cache mariadb-dev build-base pkgconf
 COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
-RUN pip install --trusted-host pypi.python.org -r requrements
+RUN pip install --trusted-host pypi.python.org -r requirements
 COPY . /app
 ENV MYSQL_USER root
 ENV MYSQL_PASSWORD secret
