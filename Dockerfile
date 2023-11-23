@@ -1,6 +1,6 @@
 FROM python:3.8-alpine
 RUN apk add --no-cache mariadb-dev build-base pkgconf
-COPY ./requrements.txt /app/requrements.txt
+COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip install --trusted-host pypi.python.org -r requrements
 COPY . /app
