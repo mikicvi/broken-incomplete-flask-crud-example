@@ -48,7 +48,7 @@ def update():
         name = request.args.get('name')
         email = request.args.get('email')
 
-        query = '''UPDATE students SET studentName='{}', email='{}' WHERE id={};'''.format(name, email, id)
+        query = '''UPDATE students SET studentName='{}', email='{}' WHERE id={};'''.format(name, email, id) # Update the student with the new email
         success = execute_query(query)
 
         if success:
