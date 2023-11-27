@@ -27,8 +27,8 @@ def execute_query(query):
 
 @app.route("/add", methods=['POST'])  # Add Student
 def add():
-    name = request.args.get('name')
-    email = request.args.get('email')
+    name = request.form.get('name')
+    email = request.form.get('email')
     try:
         query = '''INSERT INTO students(studentName, email) VALUES('{}', '{}');'''.format(name, email)
         success = execute_query(query)
