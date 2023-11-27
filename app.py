@@ -74,7 +74,7 @@ def delete():
         return '{"Result": "Error", "Message": "' + str(e) + '"}'
 
 
-@app.route("/")  # Default - Show Data
+@app.route("/default")  # Default - Show Data
 def read():
     try:
         cur = mysql.connection.cursor()
@@ -96,6 +96,10 @@ def read():
         return ret
     except Exception as e:
         return '{"Result": "Error", "Message": "' + str(e) + '"}'
+    
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
