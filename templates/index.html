@@ -90,7 +90,7 @@
 
         $.ajax({
           url: '/update',
-          method: 'PUT',
+          method: 'POST',
           contentType: 'application/json',
           data: JSON.stringify({ id: id, name: name, email: email }),
           success: function(response) {
@@ -110,7 +110,7 @@
 
         $.ajax({
           url: '/delete',
-          method: 'DELETE',
+          method: 'POST',
           data: JSON.stringify({ name: name }),
           success: function(response) {
             if (response.Result == 'Success') {
