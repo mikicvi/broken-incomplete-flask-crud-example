@@ -41,7 +41,7 @@ def add():
     except Exception as e:
         return '{"Result": "Error", "Message": "' + str(e) + '"}'
 
-@app.route("/update", methods=['PUT'])  # Update Student
+@app.route("/update", methods=['POST'])  # Update Student
 def update():
     try:
         id = int(request.args.get('id'))
@@ -56,7 +56,7 @@ def update():
     except Exception as e:
         return '{"Result": "Error", "Message": "' + str(e) + '"}'
 
-@app.route("/delete", methods=['DELETE'])  # Delete Student
+@app.route("/delete", methods=['POST'])  # Delete Student
 def delete():
     try:
         name = request.args.get('name')
