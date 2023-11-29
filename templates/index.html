@@ -112,7 +112,7 @@
           url: '/delete',
           method: 'DELETE',
           contentType: 'application/json',
-          data: JSON.stringify({ name: name }),
+          data: JSON.stringify({ studentName: studentName }),
           success: function(response) {
             if (response.Result === 'Success') {
               alert('Student deleted successfully!');
