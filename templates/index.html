@@ -111,8 +111,7 @@
         $.ajax({
           url: '/delete',
           method: 'DELETE',
-          contentType: 'application/json',
-          data: JSON.stringify({ studentName: studentName }),
+          data: JSON.stringify({ name: name }),
           success: function(response) {
             if (response.Result === 'Success') {
               alert('Student deleted successfully!');
