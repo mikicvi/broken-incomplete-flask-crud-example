@@ -35,7 +35,7 @@
   <h3>Delete Student</h3>
   <form id="deleteStudentForm">
     <label for="name">Name:</label>
-    <input type="text" id="deleteName" name="name">
+    <input type="text" id="name" name="name">
     <br>
     <button type="button" id="deleteStudentButton">Delete Student</button>
   </form>
@@ -106,7 +106,7 @@
 
       // Delete student
       $('#deleteStudentButton').on('click', function() {
-        var name = $('#deleteName').val();
+        var name = $('#name').val();
 
         $.ajax({
           url: '/delete',
