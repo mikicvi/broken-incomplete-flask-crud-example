@@ -10,10 +10,10 @@
   <h3>Add Student</h3>
   <form id="addStudentForm">
     <label for="addName">Name:</label>
-    <input type="text" id="addName" name="name">
+    <input type="text" id="name" name="name">
     <br>
     <label for="email">Email:</label>
-    <input type="email" id="addEmail" name="email">
+    <input type="email" id="email" name="email">
     <br>
     <button type="button" id="addStudentButton">Add Student</button>
   </form>
@@ -24,10 +24,10 @@
     <input type="number" id="id" name="id">
     <br>
     <label for="name">Name:</label>
-    <input type="text" id="updateName" name="name">
+    <input type="text" id="name" name="name">
     <br>
     <label for="email">Email:</label>
-    <input type="email" id="updateEmail" name="email">
+    <input type="email" id="email" name="email">
     <br>
     <button type="button" id="updateStudentButton">Update Student</button>
   </form>
@@ -63,8 +63,8 @@
 
       // Add student
       $('#addStudentButton').on('click', function() {
-        var name = $('#addName').val();
-        var email = $('#addEmail').val();
+        var name = $('#name').val();
+        var email = $('#name').val();
 
         $.ajax({
           url: '/add',
@@ -85,8 +85,8 @@
       // Update student
       $('#updateStudentButton').on('click', function() {
         var id = $('#id').val();
-        var name = $('#updateName').val();
-        var email = $('#updateEmail').val();
+        var name = $('#name').val();
+        var email = $('#email').val();
 
         $.ajax({
           url: '/update',
