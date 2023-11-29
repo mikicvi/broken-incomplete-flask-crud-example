@@ -113,7 +113,7 @@
           method: 'DELETE',
           data: JSON.stringify({ name: name }),
           success: function(response) {
-            if (response.Result === 'Success') {
+            if (response.Result == 'Success') {
               alert('Student deleted successfully!');
               window.location.reload();
             } else {
