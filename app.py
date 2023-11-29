@@ -44,9 +44,10 @@ def add():
 @app.route("/update", methods=['POST'])  # Update Student
 def update():
     try:
-        id = int(request.args.get('id'))
-        name = request.args.get('name')
-        email = request.args.get('email')
+        data = request.json  # Use request.json to get data from the request body
+        id = data.get('id')
+        name = data.get('name')
+        email = data.get('email')
 
         query = '''UPDATE students SET studentName = '{}', email = '{}' WHERE studentID = {} ;'''.format(name, email, id)
         print("Received Update Request. ID:", id, "Name:", name, "Email:", email)
