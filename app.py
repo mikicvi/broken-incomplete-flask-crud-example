@@ -59,7 +59,7 @@ def update():
 @app.route("/delete", methods=['POST'])  # Delete Student
 def delete():
     try:
-        name = request.args.get('name')
+        name = request.json.get('name')
 
         query = '''DELETE FROM students WHERE studentName='{}';'''.format(name)
         success = execute_query(query)

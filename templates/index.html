@@ -111,6 +111,7 @@
         $.ajax({
           url: '/delete',
           method: 'POST',
+          contentType: 'application/json',
           data: JSON.stringify({ name: name }),
           success: function(response) {
             if (response.Result == 'Success') {
